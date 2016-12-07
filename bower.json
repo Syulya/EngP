@@ -1,0 +1,21 @@
+{
+  "name": "yanao",
+  "description": "New yanao site",
+  "main": "index.js",
+  "authors": [
+    "Pavel Ksonofontov <j.a.kameas@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/kameas/yanao/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slick-carousel": "^1.6.0",
+    "gsap": "^1.19.0"
+  }
+}

@@ -1,0 +1,15 @@
+include ./bemto/bemto.pug
+- set_bemto_settings({ prefix: 'yanao-' })
+
+doctype
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title Янао
+	link(rel="stylesheet", href="./stylesheets/main.css")
+body
+	include ./parts/_header
+	block content
+	include ./parts/_footer
+	
+	script(src="./javascripts/main.js")
