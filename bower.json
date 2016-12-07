@@ -1,12 +1,12 @@
 {
-  "name": "yanao",
-  "description": "New yanao site",
+  "name": "english",
+  "description": "EnglishP",
   "main": "index.js",
   "authors": [
-    "Pavel Ksonofontov <j.a.kameas@gmail.com>"
+    "Yulya s"
   ],
   "license": "ISC",
-  "homepage": "https://bitbucket.org/kameas/yanao/",
+  "homepage": "https://bitbucket.org/Syulya/englishp",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -17,5 +17,10 @@
   "dependencies": {
     "slick-carousel": "^1.6.0",
     "gsap": "^1.19.0"
-  }
+  },
+  "keywords": [
+    "english",
+    "test"
+  ],
+  "private": true
 }

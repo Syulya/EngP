@@ -1,5 +1,5 @@
 {
-  "name": "yanao",
+  "name": "english",
   "version": "1.0.0",
   "description": "New yanao site",
   "main": "index.js",
@@ -37,5 +37,9 @@
     "gulp-watch": "^4.3.10",
     "imagemin-pngquant": "^5.0.0",
     "rimraf": "^2.5.4"
-  }
+  },
+  "keywords": [
+    "english",
+    "tests"
+  ]
 }
