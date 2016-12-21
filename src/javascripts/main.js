@@ -8,6 +8,7 @@ $(function(){
 //= ./parts/test.js
 //= ./parts/menu.js
 //= ./parts/idiom.js
+//= ./parts/animate.js
 
 });
 

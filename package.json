@@ -39,6 +39,7 @@
     "rimraf": "^2.5.4"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "bootstrap-styl": "^5.0.8",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
