@@ -1,15 +1,31 @@
 include ./bemto/bemto.pug
-- set_bemto_settings({ prefix: 'yanao-' })
+- set_bemto_settings({ prefix: 'eng-' })
 
 doctype
 html(lang="en")
-head
-	meta(charset="UTF-8")
-	title Янао
-	link(rel="stylesheet", href="./stylesheets/main.css")
-body
-	include ./parts/_header
-	block content
-	include ./parts/_footer
-	
-	script(src="./javascripts/main.js")
+	head
+		meta(charset="UTF-8")
+		title English
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="stylesheet", href="/stylesheets/main.css")
+		link(href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700&amp;subset=cyrillic" rel="stylesheet")
+	body
+		.content
+			include ./parts/_header.pug
+			include ./parts/_slider
+
+			//- .container.main
+
+			//- 	.row.main
+						
+			//- 		.col-md-2.block-menu
+			//- //block menu
+			include ./parts/_menu.pug
+					//- .col-md-10
+			block wrapper
+							
+			include ./parts/_footer			
+						
+
+
+		script(src="/javascripts/main.js")

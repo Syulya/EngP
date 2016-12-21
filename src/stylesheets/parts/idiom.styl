@@ -1,0 +1,133 @@
+.eng-galery
+	width 100%
+	overflow hidden
+	margin 0 auto
+	padding 0
+	
+
+.eng-idioms
+	width 23%
+	height 270px
+	padding 10px
+	margin-right 2.666666666667%
+	background-color rgba(0, 150, 136, 0.36)
+	border-radius 5%
+	position relative
+	margin-top 15px
+	float left
+	&:nth-child(4n)
+		margin-right 0
+	
+	@media(max-width 1000px)
+		width 31%
+		margin-right 2.3333333333%
+		&:nth-child(3n)
+			margin-right 0
+		&:nth-child(4n)
+			margin-right 2.3333333333%
+	@media(max-width 700px)
+		width 48%
+		margin-right 2%
+		&:nth-child(2n)
+			margin-right 0
+		// &:nth-child(3n)
+		// 	margin-right 2%
+	@media(max-width 500px)
+		width 100%
+		
+
+	
+	
+.eng-back
+	width 100%
+	height 100%
+	position relative
+	top 0
+	left 0
+	//background-color rgba(196, 160, 209, 0.53)
+	text-align center
+	border-radius 5%
+	
+	&__title
+		font-size 24px
+		color #855489
+		font-weight 700
+		padding-top 10px
+	&__text
+		font-size 18px
+		color green
+
+.eng-front
+	width 100%
+	height 100%
+	padding 10px
+	position absolute
+	top 0
+	left 0
+	text-align center
+	border-radius 5%
+	background-color rgba(0, 150, 136, 0.3)
+	//rgba(196, 160, 209, 0.53)
+	display none
+	//transition  top 1s, opacity 1s
+	
+	// &:hover,
+	// &:focus
+	// 	top 0
+	// 	opacity 1
+
+	&__example
+		font-size 18px
+		font-style italic
+		font-weight 600
+		color #933a4f
+		padding-top 145px
+		
+//rgba(0, 150, 136, 0.57);	
+span.idiom	
+	color #26367c
+
+// 	-webkit-transform-style: preserve-3d
+// 	transform-style: preserve-3d
+	
+// 	&:hover
+// 		.eng-back
+// 			// -moz-transform: rotate3d(0,1,0, 180deg)
+// 			// -ms-transform: rotate3d(0,1,0, 180deg)
+// 			// -o-transform: rotate3d(0,1,0, 180deg)
+// 			// -webkit-transform: rotate3d(0,1,0, 180deg)
+// 			transform: rotate3d(0,1,0, 180deg)
+// 		.eng-front
+// 			// -moz-transform: rotate3d(0,1,0, 0deg)
+// 			// -ms-transform: rotate3d(0,1,0, 0deg)
+// 			// -o-transform: rotate3d(0,1,0, 0deg)
+// 			// -webkit-transform: rotate3d(0,1,0, 0deg)
+// 			transform: rotate3d(0,1,0, 0deg)
+	
+// .eng-back, 
+// .eng-front
+// 	position: absolute
+// 	width: 522px
+// 	height: 564px
+// 	-moz-transition: all .8s
+// 	-o-transition: all .8s
+// 	-webkit-transition: all .8s
+// 	transition: all .8s
+	
+// .eng-back
+// 	background-image url('../images/back.png')
+
+// .eng-front
+// 	background-image url('../images/face.png')
+// 	// -moz-transform: rotate3d(0,1,0, 180deg)
+// 	// -ms-transform: rotate3d(0,1,0, 180deg)
+// 	// -o-transform: rotate3d(0,1,0, 180deg)
+// 	// -webkit-transform: rotate3d(0,1,0, 180deg)
+// 	transform: rotate3d(0,1,0, 180deg)
+	
+// .eng-backface
+// 	.back,
+// 	.front
+// 		// -moz-backface-visibility: hidden
+// 		// -webkit-backface-visibility: hidden
+// 		backface-visibility: hidden

@@ -10,19 +10,22 @@ var path = {
 		pug: './src/**/*.pug',
 		js: './src/javascripts/*.js',
 		styl: './src/stylesheets/*.styl',
-		images: './src/images/**/*.*'
+		images: './src/images/**/*.*',
+		fonts: './src/fonts/**/*.*'
 	},
 	build: {
 		html: './build/',
 		js: './build/javascripts/',
 		css: './build/stylesheets/',
-		images: './build/images/'
+		images: './build/images/',
+		fonts: './build/fonts/'
 	},
 	watch: {
 		pug: './src/**/*.pug',
 		js: './src/javascripts/**/*.js',
 		styl: './src/stylesheets/**/*.styl',
-		images: './src/images/**/*.*'
+		images: './src/images/**/*.*',
+		fonts: '/.src/fonts/**/*.*'
 	},
 	clean: './build'
 }
@@ -30,11 +33,19 @@ var path = {
 var server = {
 	server: {
 		baseDir: "./build/"
-	}
+	},
+	directory: true,
+	open: false
 }
 
 gulp.task('clean', function (cb) {
 	rimraf(path.clean, cb);
+});
+
+gulp.task('fonts', function () {
+	gulp.src(path.src.fonts)
+		.pipe(gulp.dest(path.build.fonts))
+		.on('end', browserSync.reload);
 });
 
 gulp.task('html', function() {
@@ -92,15 +103,15 @@ gulp.task('js:build', function() {
 gulp.task('images',function(){
 	gulp.src(path.src.images)
 		.pipe($.newer(path.src.images))
-		.pipe($.imagemin({
-			progressive: true,
-			svgoPlugins: [{removeViewBox: false}],
-			use: [pngquant()],
-			interlaced: true,
-			options: {
-					cache: true
-			}
-		}))
+		// .pipe($.imagemin({
+		// 	progressive: true,
+		// 	svgoPlugins: [{removeViewBox: false}],
+		// 	use: [pngquant()],
+		// 	interlaced: true,
+		// 	options: {
+		// 			cache: true
+		// 	}
+		// }))
 		.pipe(gulp.dest(path.build.images));
 })
 
@@ -110,6 +121,9 @@ gulp.task('webserver', function () {
 
 gulp.task('watch', function () {
 
+	$.watch([path.watch.fonts], function(event, cb) {
+		gulp.start('fonts');
+	});
 	$.watch([path.watch.pug], function(event, cb) {
 		gulp.start('html');
 	});
@@ -125,11 +139,11 @@ gulp.task('watch', function () {
 });
 
 gulp.task('dev', function(){
-	gulp.start('html','css:dev','js:dev','images');
+	gulp.start('html','css:dev','js:dev','images','fonts');
 })
 
 gulp.task('build', function(){
-	gulp.start('html','css:build','js:build','images');
+	gulp.start('html','css:build','js:build','images','fonts');
 })
 
 gulp.task('default',['dev','watch','webserver'])
