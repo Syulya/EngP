@@ -7939,6 +7939,7 @@ $('.link_burger').on('click', function(e){
 		burger.css("color","#6d9966");
 		word.css("color","#6d9966");
 		burger.text('X');
+		menu_links.css('display', 'block')
 		console.log($('.menu-links'));
 		//$('.menu-links ul li').addClass('active');
 		//$('.menu_links').addClass('active');

@@ -9569,7 +9569,12 @@ ol li input {
 }
 .eng-mslider {
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 0 auto;
+}
+@media (max-width: 770px) {
+  .eng-mslider {
+    margin-top: 87px;
+  }
 }
 .eng-sl,
 .eng-sl-slider {
@@ -9586,6 +9591,16 @@ ol li input {
   text-align: center;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
   font-size: 30px;
+}
+@media (max-width: 770px) {
+  .eng-sl-text {
+    font-size: 22px;
+  }
+}
+@media (max-width: 500px) {
+  .eng-sl-text {
+    font-size: 16px;
+  }
 }
 .eng-title {
   padding-top: 30px;
@@ -9614,18 +9629,18 @@ ol li input {
 span.idiom {
   color: #000;
 }
+.slick-dots {
+  bottom: 10px;
+}
+@media (max-width: 770px) {
+  .slick-dots {
+    bottom: -25px;
+  }
+}
 .slick-dots li button {
   border: 1px solid #777;
   border-radius: 50%;
   transition: border-color 0.3s;
-}
-.slick-dots li button:hover,
-.slick-dots li button:active {
-  border-color: #fff;
-}
-.slick-dots li button:hover:before,
-.slick-dots li button:active:before {
-  background: #fff;
 }
 .slick-dots li button:before {
   content: '';
@@ -9638,6 +9653,18 @@ span.idiom {
   left: 50%;
   margin: -5px 0 0 -5px;
   transition: background 0.3s;
+}
+.slick-dots li button:hover {
+  border-color: #fff;
+}
+.slick-dots li button:hover:before {
+  background: #fff;
+}
+.slick-dots li.slick-active button {
+  border-color: #fff;
+}
+.slick-dots li.slick-active button:before {
+  background: #fff;
 }
 .menu-wrapper {
   position: fixed;
@@ -9664,6 +9691,7 @@ span.idiom {
   top: 0;
   left: -20px;
   opacity: 0;
+  display: none;
 }
 .menu-cover {
   height: 87px;

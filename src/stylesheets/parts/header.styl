@@ -122,7 +122,10 @@
 
 .eng-mslider
 	max-width 1200px
-	margin 20px auto
+	margin 0 auto
+	@media(max-width 770px)
+		margin-top 87px
+		
 .eng-sl	
 	
 		
@@ -140,30 +143,10 @@
 	text-align center
 	text-shadow 1px 1px 1px rgba(0, 0,0, 0.7)
 	font-size 30px
-	 // width 900px
-	 // min-height 350px
-	//background url('../images/london1.png') 100% 100% no-repeat
-	// background-size cover
-	//background-color #39a28b
-	// padding: 10px
-	// text-align left
-.eng-second
-	// width 900px
-	// min-height 350px
-	// //background url('../images/london2.png') 100% 100% no-repeat
-	// // background-size cover
-	// //background-color #93a8b9
-	// text-align left
-	// padding: 10px
-	
-.eng-third
-	// width 900px
-	// min-height 350px
-	// //background url('../images/london3.png') 100% 100% no-repeat
-	// // background-size cover
-	// text-align left
-	// //background: #61687f
-	// padding: 10px
+	@media(max-width 770px)
+		font-size 22px
+	@media(max-width 500px)
+		font-size 16px
 
 
 
@@ -195,16 +178,27 @@
 
 span.idiom
 	color: black
+	
+
+// .slick-prev
+// 	left 25px
+// 	z-index 1001
+	
+// .slick-next
+// 	right 25px
+// 	z-index 1001
+
+.slick-dots
+	bottom 10px
+	@media(max-width 770px)
+		bottom -25px
+	
 
 .slick-dots li button
 	border 1px solid #777
 	border-radius 50%
 	transition border-color .3s
-	&:hover,
-	&:active
-		border-color #fff
-		&:before
-			background #fff
+	
 	&:before
 		content ''
 		width 10px
@@ -216,6 +210,18 @@ span.idiom
 		left 50%
 		margin -5px 0 0 -5px
 		transition background .3s
+
+	&:hover
+		border-color #fff
+		&:before
+			background #fff
+.slick-dots li.slick-active button
+		border-color #fff
+		&:before
+			background #fff
+			
+		
+	
 		// &:hover,
 		// &:active
 		// 	background #fff	
