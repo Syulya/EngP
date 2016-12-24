@@ -15,7 +15,7 @@ $('.link_burger').on('click', function(e){
 				x: [0, 0],
 				scale: [1, 1]}, autoAlpha: 1},
 				{cycle:{
-				x: [-50, 50],
+				x: [-20, 20],
 				scale: [2, 0.5]}, autoAlpha: 0, ease:Power1.easeOut}, 0.1)
 			.to(menu_links, 0.1, {x: 0, autoAlpha: 0, ease:Power1.easeOut});
 		//menu_links.removeClass('active');	
@@ -26,29 +26,24 @@ $('.link_burger').on('click', function(e){
 		word.css("color","#6d9966");
 		burger.text('X');
 		menu_links.css('display', 'block')
-		console.log($('.menu-links'));
-		//$('.menu-links ul li').addClass('active');
-		//$('.menu_links').addClass('active');
 		tl
 			.to(menu_links, 0.2, {x: 20, autoAlpha: 1, ease:Power1.easeOut})
 			.staggerFromTo(li, 0.5, {cycle:{
-				x: [-50, 50],
+				x: [-20, 20],
 				scale: [2, 0.5]}, autoAlpha: 0},
 				{cycle:{
 				x: [0, 0],
 				scale: [1, 1]}, autoAlpha: 1, ease:Power1.easeOut}, 0.1);
 
-				//{y: 0, autoAlpha: 1,  ease: Power0.easeNone}, 0.1);
-		//tl.staggerFromTo(buttons,0.2, {autoAlpha: 0, x:10},
-		//{x: -20, autoAlpha: 1, ease:Power1.easeOut}, 0.1);
-	
 	}
-	// menu_links.addClass('active');
-	// $('.link_burger p').text('X');
-	// 	$(this).on('click', function(e){
-	// 		menu_links.removeClass('active');
-	// 	});		
+	
 });
 
+var drop = $('.eng-drop'),
+	list = $('.eng-sidenav__but');
+drop.hide();
+list.on('click', function(){
+	$(this).next().slideToggle();
+	return false;	
+})
 
-//tl.staggerFrom(li, 0.2, {x: 200, ease:Power1.easeOut}, 0.1);

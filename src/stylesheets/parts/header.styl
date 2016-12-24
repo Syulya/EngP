@@ -1,8 +1,4 @@
-//nav.navbar.navbar-default
-	// background: #e88a57
-	// font-size: 18px
-	// font-weight: 600
-	
+
 .eng-header
 	max-width 100%
 	margin: 0
@@ -11,6 +7,7 @@
 	font-size 18px
 	line-height 18px
 	position relative
+	box-shadow 0 0 10px rgba(0,0,0,0.5)
 	
 .eng-menu-top	
 	margin 0 auto
@@ -60,24 +57,24 @@
 		@media (max-width 770px)
 			display none
 			
-		&:hover
+		&:hover,
+		&:active
 			border-bottom 4px solid #6d9966
-		// &:nth-child(4)
-		// 	&:hover
-		// 		border-bottom none
+		
 			
 	&__link
 		display block
 		padding 25px 10px
-		font-family $font-family-serif
+		// font-family $font-family-serif
 		color white
 		
 		position relative
-		&:hover
+		&:hover,
+		&:active
 			color #6d9966
 			text-decoration none
-		// @media (max-width $screen-xs-max)
-		// 	font-size 12px
+	
+			
 	
 .eng-dropdown-wrapper
 	&:hover
@@ -90,13 +87,10 @@
 .eng-dropdown
 	display block
 	padding 25px 10px
-	font-family $font-family-serif
 	color white
 	list-style inside none
 	position relative
-	//border-bottom 3px solid #685569
-	// @media (max-width $screen-xs-max)
-	// 		font-size 12px
+
 	&:hover
 		color #6d9966
 		text-decoration none
@@ -110,28 +104,36 @@
 		
 .eng-dropdown-menu	
 	position absolute
-	top 45px
+	top 60px
 	right 0px
 	
-	padding 10px
-	min-width 130px
+	padding 0
+	
 	list-style inside none
 	text-align center
 	box-shadow 0 0 40px rgba(0,0,0,.15)
 	z-index 5
-	background-color #eac
+	background-color #d9b9df
 	display none
-	
-	&__item
-		margin-bottom 11px
-		
-		
-		&:last-child
-			margin-bottom 0
 			
 	&__link
-		display inline-block
+		min-width 130px
+		display block
 		font-size 18px
+		border-bottom 1px solid #666
+		padding 10px
+		transition 0.5s all
+		
+		&:hover
+			background #f4d3f2
+			text-decoration none
+			padding 10px 0 10px 20px
+
+.eng-dropdown-menu__link
+		&:nth-child(2)
+			border-bottom none	
+
+		
 		
 .eng-logo._burger
 	font-size 18px
@@ -143,9 +145,7 @@
 .eng-mslider
 	max-width 1200px
 	margin 0 auto
-	
-		
-//.eng-sl	
+	box-shadow 0 0 10px rgba(0,0,0,0.5)
 	
 		
 .eng-sl-slider
@@ -187,7 +187,7 @@
 	color: white
 	font-size: 36px
 	font-weight: 600
-	// font-style: italic
+
 
 .eng-example 
 	color: white
@@ -199,13 +199,6 @@ span.idiom
 	color: black
 	
 
-// .slick-prev
-// 	left 25px
-// 	z-index 1001
-	
-// .slick-next
-// 	right 25px
-// 	z-index 1001
 
 .slick-dots
 	bottom 10px

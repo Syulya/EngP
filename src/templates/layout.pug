@@ -14,16 +14,13 @@ html(lang="en")
 		.content
 			include ./parts/_header.pug
 			include ./parts/_slider
-
-			//- .container.main
-
-			//- 	.row.main
-						
-			//- 		.col-md-2.block-menu
-			//- //block menu
 			include ./parts/_menu.pug
-					//- .col-md-10
-			block wrapper
+			.eng-center
+				.row
+					.col-md-3.col-sm-3
+						include ./parts/_sidemenu.pug
+					.col-md-9.col-sm-9
+						block wrapper
 							
 			include ./parts/_footer			
 						

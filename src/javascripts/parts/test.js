@@ -1,7 +1,3 @@
-// $('.logo').on('click', function(e){
-// 	console.log('it is work');
-		
-// });
 
 // var qFirst = $('span.first').text(),
 // 	q1t = $('input.q1t').text(),
@@ -28,6 +24,24 @@
 // 	// 	element.age + ', Ник:' + element.username
 // 	// }).appendTo(container)
 // });
+
+
+//прячем/показываем тест
+$('.eng-practice').hide();
+var test = $('.eng-test-btn._theory'),
+	theory = $('.eng-test-btn._practice');
+
+test.on('click', function(e){
+	e.preventDefault();
+	$('.eng-practice').slideDown();
+	$('.eng-theory').hide();
+});
+theory.on('click', function(e){
+	e.preventDefault();
+	$('.eng-theory').slideDown();
+	$('.eng-practice').hide();
+})
+
 
 //плагин для записи данных из формы в массив
 $.fn.serializeObject = function(){

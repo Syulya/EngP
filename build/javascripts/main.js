@@ -7836,10 +7836,6 @@ $('.eng-sl').slick({
 	cssEase: 'linear',
 	
 });
-// $('.logo').on('click', function(e){
-// 	console.log('it is work');
-		
-// });
 
 // var qFirst = $('span.first').text(),
 // 	q1t = $('input.q1t').text(),
@@ -7866,6 +7862,24 @@ $('.eng-sl').slick({
 // 	// 	element.age + ', Ник:' + element.username
 // 	// }).appendTo(container)
 // });
+
+
+//прячем/показываем тест
+$('.eng-practice').hide();
+var test = $('.eng-test-btn._theory'),
+	theory = $('.eng-test-btn._practice');
+
+test.on('click', function(e){
+	e.preventDefault();
+	$('.eng-practice').slideDown();
+	$('.eng-theory').hide();
+});
+theory.on('click', function(e){
+	e.preventDefault();
+	$('.eng-theory').slideDown();
+	$('.eng-practice').hide();
+})
+
 
 //плагин для записи данных из формы в массив
 $.fn.serializeObject = function(){
@@ -7929,7 +7943,7 @@ $('.link_burger').on('click', function(e){
 				x: [0, 0],
 				scale: [1, 1]}, autoAlpha: 1},
 				{cycle:{
-				x: [-50, 50],
+				x: [-20, 20],
 				scale: [2, 0.5]}, autoAlpha: 0, ease:Power1.easeOut}, 0.1)
 			.to(menu_links, 0.1, {x: 0, autoAlpha: 0, ease:Power1.easeOut});
 		//menu_links.removeClass('active');	
@@ -7940,53 +7954,30 @@ $('.link_burger').on('click', function(e){
 		word.css("color","#6d9966");
 		burger.text('X');
 		menu_links.css('display', 'block')
-		console.log($('.menu-links'));
-		//$('.menu-links ul li').addClass('active');
-		//$('.menu_links').addClass('active');
 		tl
 			.to(menu_links, 0.2, {x: 20, autoAlpha: 1, ease:Power1.easeOut})
 			.staggerFromTo(li, 0.5, {cycle:{
-				x: [-50, 50],
+				x: [-20, 20],
 				scale: [2, 0.5]}, autoAlpha: 0},
 				{cycle:{
 				x: [0, 0],
 				scale: [1, 1]}, autoAlpha: 1, ease:Power1.easeOut}, 0.1);
 
-				//{y: 0, autoAlpha: 1,  ease: Power0.easeNone}, 0.1);
-		//tl.staggerFromTo(buttons,0.2, {autoAlpha: 0, x:10},
-		//{x: -20, autoAlpha: 1, ease:Power1.easeOut}, 0.1);
-	
 	}
-	// menu_links.addClass('active');
-	// $('.link_burger p').text('X');
-	// 	$(this).on('click', function(e){
-	// 		menu_links.removeClass('active');
-	// 	});		
+	
 });
 
+var drop = $('.eng-drop'),
+	list = $('.eng-sidenav__but');
+drop.hide();
+list.on('click', function(){
+	$(this).next().slideToggle();
+	return false;	
+})
 
-//tl.staggerFrom(li, 0.2, {x: 200, ease:Power1.easeOut}, 0.1);
-// var tl1 = new TimelineLite();
-// var	eng_front = $('.eng-front');
-
-// $('.eng-front').on('mouseenter', function(e){
-// 	var tl = new TimelineLite();
-// 	var	eng_front = $('.eng-front');
-
-// 	tl.to(eng_front, 0.5, {y:50, autoAlpha:1, ease:Power1.easeOut});
-// });
-
-// $('.eng-back').on('mouseenter', function(){	
-// 	$('.eng-front').slideToggle();
-// });
-// $('.eng-front').on('mouseleave', function(){
-	
-// 	$('.eng-front').slideToggle();
-// })
 $( '.eng-idioms').on('mouseenter', function(){
 	var $this = $(this);
 	var ch = $this.children('div:last');
-	console.log(ch);
 	ch.slideToggle();
 });
 $('.eng-idioms').on('mouseleave', function(){
@@ -7996,13 +7987,29 @@ $('.eng-idioms').on('mouseleave', function(){
 })
 
 $(window).scroll(function (){
-        $(' .movprep').each(function (){
+        $('.eng-main__title').each(function (){
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
             if (imagePos < topOfWindow+400) {
-                $(this).addClass('tada');
+                $(this).addClass('animated bounce');
+            }
+            else if(imagePos > topOfWindow+405){
+            	 console.log('else');
+            	 $(this).removeClass('animated bounce');
             }
         });
-    });
+    });﻿
+$('.eng-item').on('mouseenter', function(){
+    $(this).addClass('animated bounce');
+});
+$('.eng-item').on('mouseleave',function(){
+	$(this).removeClass('animated bounce');
+});
+$('.movprep').on('mouseenter', function(){    
+    $(this).addClass('animated tada');
+});
+$('.movprep').on('mouseleave',function(){
+	$(this).removeClass('animated tada');
+});
 
 });

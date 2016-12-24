@@ -5,101 +5,28 @@
 			p.menu-sign &#9776
 			p.menu-letters меню
 	.menu-links
-		ul.ul
-			li.limenu: a(href="#") Grammar Rules
+		ul.ul.eng-sidenav
+			li.limenu.eng-sidenav__list 
+				a.eng-sidenav__but(href="#") Grammar Rules
+				ul.eng-drop
+					li: a.eng-drop__link(href="#") Tenses
+					li: a.eng-drop__link(href="#") Futures
+					li: a.eng-drop__link(href="#") Conditionals
+					li: a.eng-drop__link(href="#") Relative Clauses
 			li.limenu: a(href="#") Grammar Exercises
 			li.limenu: a(href="#") Grammar Terms
-			li.limenu: a(href="#") Vocabulary
-			li.limenu: a(href="#") Prepositions
+			li.limenu.eng-sidenav__list 
+				a.eng-sidenav__but(href="#") Vocabulary
+				ul.eng-drop
+					li: a.eng-drop__link(href="#") Phrasal Verbs
+					li: a.eng-drop__link(href="#") Confusing words
+			li.limenu.eng-sidenav__list
+				a.eng-sidenav__but(href="#") Prepositions
+				ul.eng-drop
+					li: a.eng-drop__link(href="#") Place/movement
+					li: a.eng-drop__link(href="#") Time
+					li: a.eng-drop__link(href="#") Dependent
+			li.limenu.eng-sidenav__list: a(href='../idioms.html') Idioms
+			li.limenu.eng-sidenav__list: a(href='../tests.html') Test
+			li.limenu.eng-sidenav__list: a(href='../main.html') Home
 
-//- +b.top-menu
-//- 	.container
-//- 		+b.menu-all
-//- 			+e.icon
-//- 				include ../../images/icons/dropdown.svg
-//- 			+e.title ВСЕ МЕНЮ
-//- 		+b.UL.menu-list
-//- 			+e.item
-//- 				+e.A.link(href="#") Департамент
-//- 			+e.item
-//- 				+e.A.link(href="#") Департамент
-//- 			+e.item
-//- 				+e.A.link(href="#") Департамент
-//- 			+e.item
-//- 				+b.SPAN.dropdown(href="#") Еще
-//- 				+b.UL.dropdown-menu
-//- 					+e.item
-//- 						+e.link(href="#") Указы президента РФ
-//- 					+e.item
-//- 						+e.link(href="#") Указы президента РФ
-//- 	+b.detail-menu
-//- 		.container
-//- 			.row
-//- 				.col-lg-9
-//- 					+b.navigation
-//- 						+e.UL.list
-//- 							li
-//- 								+e.A.link(href="#") Департамент
-//- 							li
-//- 								+e.A.link(href="#") Департамент
-//- 							li
-//- 								+e.A.link(href="#") Мероприятия организации на 2016-2018 года
-//- 							li
-//- 								+e.A.link(href="#") Департамент
-//- 							li
-//- 								+e.A.link(href="#") Департамент
-//- 							li
-//- 								+e.A.link(href="#") Департамент
-//- 							li
-//- 								+e.A.link(href="#") Департамент
-//- 							li
-//- 								+e.A.link(href="#") Департамент
-//- 							li
-//- 								+e.A.link(href="#") Мероприятия организации на 2016-2018 года
-//- 							li
-//- 								+e.A.link(href="#") Департамент
-//- 							li
-//- 								+e.A.link(href="#") Департамент
-//- 							li
-//- 								+e.A.link(href="#") Департамент
-
-
-//- 				.col-lg-3
-//- 					+b.contacts
-//- 					+e.item._indent
-//- 						+e.SPAN.label Адрес
-//- 						+e.SPAN.text 629009, Ямало-Ненецкий А.О., Салехард, проспект Молодёжи, 9
-//- 					+e.item.
-//- 						+e.SPAN.label Телефон
-//- 						+e.SPAN.text 
-//- 						a(href="tel:8349222-24-06") 8 (34922) 2-24-06
-//- 					+e.item.
-//- 						+e.SPAN.label Факс
-//- 						+e.SPAN.text 
-//- 						a(href="tel:83492241043 ") 8 (34922) 4-10-43 
-
-
-
-	//- +b.btn
-	//- 	+e.image
-	//- 		img(src="", alt="")
-	//- 	+e.title ВСЕ МЕНЮ
-	//- +b.links
-	//- 	ul
-	//- 		li
-	//- 			a(href='#') Департамент
-	//- 		li
-	//- 			a(href='#') Противодействие коррупции
-	//- 		li
-	//- 			a(href='#') Мероприятия
-	//- 		li
-	//- 			a(href='#') Конкурсы
-	//- 		li
-	//- 			a(href='#') Реестры
-	//- 		li
-	//- 			a(href='#') Пресс-центр
-	//- 		li
-	//- 			a(href='#') Еще
-	//- 		li
-	//- 			a(href='#') ...
-	//- 	

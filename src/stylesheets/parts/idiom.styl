@@ -1,39 +1,43 @@
 .eng-galery
-	width 100%
+	max-width 100%
 	overflow hidden
 	margin 0 auto
 	padding 0
 	margin-bottom 30px
 	
-
+.eng-idi__title
+	text-align center
+.eng-idi__text	
+	text-align center
+.eng-idioms-wrapper
+	max-width 100%
+	overflow hidden
+	padding 0	
+	
 .eng-idioms
-	width 23%
+	width 31%
 	height 270px
 	padding 10px
-	margin-right 2.666666666667%
+	margin-right 3.5%
 	background-color rgba(0, 150, 136, 0.36)
 	border-radius 5%
 	position relative
 	margin-top 15px
 	float left
-	&:nth-child(4n)
+	
+	&:nth-child(3n)
 		margin-right 0
 	
-	@media(max-width 1000px)
-		width 31%
-		margin-right 2.3333333333%
-		&:nth-child(3n)
-			margin-right 0
-		&:nth-child(4n)
-			margin-right 2.3333333333%
-	@media(max-width 700px)
+	@media(max-width 1050px)
 		width 48%
-		margin-right 2%
+		margin-right 4%
+		&:nth-child(3n)
+			margin-right 4%
 		&:nth-child(2n)
 			margin-right 0
-		&:nth-child(3n)
-			margin-right 2%
-	@media(max-width 500px)
+	
+	
+	@media(max-width 590px)
 		width 100%
 		
 
@@ -45,19 +49,26 @@
 	position relative
 	top 0
 	left 0
-	//background-color rgba(196, 160, 209, 0.53)
 	text-align center
 	border-radius 5%
 	
 	&__title
 		font-size 24px
-		color #855489
+		text-transform uppercase
+		color #d80610
 		font-weight 700
 		padding-top 10px
+		text-shadow: 1px 1px 1px #666
+		@media(max-width 1200px)
+			font-size 22px
 	&__text
-		font-size 18px
-		color green
-
+		color #410347
+		font-weight bold
+		text-shadow: 1px 1px 1px #fff
+		@media(max-width 1200px)
+			font-size 16px
+		@media(max-width 590px)
+			font-size 20px
 .eng-front
 	width 100%
 	height 100%
@@ -67,68 +78,27 @@
 	left 0
 	text-align center
 	border-radius 5%
-	background-color rgba(0, 150, 136, 0.3)
-	//rgba(196, 160, 209, 0.53)
-	display none
-	//transition  top 1s, opacity 1s
+	background-color rgba(0, 150, 136, 0.2)
 	
-	// &:hover,
-	// &:focus
-	// 	top 0
-	// 	opacity 1
+	display none
+	
 
 	&__example
-		font-size 18px
+		font-size 20px
 		font-style italic
 		font-weight 600
-		color #933a4f
+		text-shadow 1px 1px 1px rgba(0, 0,0, 0.7)
+		color #fff
 		padding-top 145px
+		@media(max-width 1200px)
+			font-size 16px
+		@media(max-width 590px)
+			font-size 20px
 		
-//rgba(0, 150, 136, 0.57);	
+
 span.idiom	
-	color #26367c
+	color #d80610
+	font-weight bold
+	font-size 20px
+	text-shadow: 1px 1px 1px #666
 
-// 	-webkit-transform-style: preserve-3d
-// 	transform-style: preserve-3d
-	
-// 	&:hover
-// 		.eng-back
-// 			// -moz-transform: rotate3d(0,1,0, 180deg)
-// 			// -ms-transform: rotate3d(0,1,0, 180deg)
-// 			// -o-transform: rotate3d(0,1,0, 180deg)
-// 			// -webkit-transform: rotate3d(0,1,0, 180deg)
-// 			transform: rotate3d(0,1,0, 180deg)
-// 		.eng-front
-// 			// -moz-transform: rotate3d(0,1,0, 0deg)
-// 			// -ms-transform: rotate3d(0,1,0, 0deg)
-// 			// -o-transform: rotate3d(0,1,0, 0deg)
-// 			// -webkit-transform: rotate3d(0,1,0, 0deg)
-// 			transform: rotate3d(0,1,0, 0deg)
-	
-// .eng-back, 
-// .eng-front
-// 	position: absolute
-// 	width: 522px
-// 	height: 564px
-// 	-moz-transition: all .8s
-// 	-o-transition: all .8s
-// 	-webkit-transition: all .8s
-// 	transition: all .8s
-	
-// .eng-back
-// 	background-image url('../images/back.png')
-
-// .eng-front
-// 	background-image url('../images/face.png')
-// 	// -moz-transform: rotate3d(0,1,0, 180deg)
-// 	// -ms-transform: rotate3d(0,1,0, 180deg)
-// 	// -o-transform: rotate3d(0,1,0, 180deg)
-// 	// -webkit-transform: rotate3d(0,1,0, 180deg)
-// 	transform: rotate3d(0,1,0, 180deg)
-	
-// .eng-backface
-// 	.back,
-// 	.front
-// 		// -moz-backface-visibility: hidden
-// 		// -webkit-backface-visibility: hidden
-// 		backface-visibility: hidden

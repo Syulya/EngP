@@ -1,50 +1,129 @@
 +b.test
-	+b.center
-		+e.title
-			h3  Type the best word to complete these sentences
+	+b.theory
+		+e.text
+			+b.H3.test-title Be (am, is, are)
+			+e.P
+				|In the present, 
+				b be 
+				|changes to 
+				b am
+				|, 
+				b is 
+				|or 
+				b are:<br>
+				|I 
+				+e.be am 
+				|happy.<br>
+				|He 
+				+e.be is 
+				|happy.<br>
+				|They 
+				+e.be are 
+				|happy.<br>
+				|We use the verb 
+				+e.be BE
+				| with adjectives and nouns:<br>
+				|I 
+				+e.be am 
+				|a teacher. (be + noun)<br>
+				|I 
+				+e.be am 
+				|hungry. (be + adjective)<br>
+			+e.P
+				|When we speak or write informally, we use contractions.<br>
+				|This means that 
+				b am, 
+				b is 
+				|and 
+				b are 
+				|change to 
+				b 'm, 
+				b 's 
+				|and 
+				b 're.<br>
+				|I 
+				+e.be am 
+				| happy. => I
+				+e.be 'm 
+				|happy.<br>
+				|He 
+				+e.be is 
+				|tired. => He
+				+e.be 's
+				| tired.<br>
+				|They 
+				+e.be am 
+				| late. => They
+				+e.be 're 
+				| late.<br>
+			+e.P
+				|Positive sentences, negative sentences and questions are made like this:<br>
+				b Positive: 
+				|You 
+				+e.be are 
+				|late.<br>
+				b Negative: 
+				|You 
+				+e.be aren't 
+				|late.<br>
+				b Question: 
+				+e.be Are 
+				|you late?<br>
+
+		+b.test-btn._theory
+			+e.P.A(href="#") Exercises with BE
+	
+	+b.practice
+		+b.H3.test-title Type the best word to complete these sentences
 			
-			form#form-test(action="#")
-				ol
-					li
-						span.first He
-						input.q1(name="q1" type="text")
-						span.second French. He was born in Paris.
-					li 
-						span.first They
-						input.q2(name="q2" type="text")
-						span.second Japanes. They live in Tokio
-					li
-						span.first He
-						input.q1(name="q1" type="text")
-						span.second French. He was born in Paris.
-					li 
-						span.first They
-						input.q2(name="q2" type="text")
-						span.second Japanes. They live in Tokio
-					li
-						span.first He
-						input.q1(name="q1" type="text")
-						span.second French. He was born in Paris.
-					li 
-						span.first They
-						input.q2(name="q2" type="text")
-						span.second Japanes. They live in Tokio
-					li
-						span.first He
-						input.q1(name="q1" type="text")
-						span.second French. He was born in Paris.
-					li 
-						span.first They
-						input.q2(name="q2" type="text")
-						span.second Japanes. They live in Tokio
-					li
-						span.first He
-						input.q1(name="q1" type="text")
-						span.second French. He was born in Paris.
-					li 
-						span.first They
-						input.q2(name="q2" type="text")
-						span.second Japanes. They live in Tokio
-					input.btn-test(name="btn" type="submit" value="Проверить")
-				button.btn-read Показать
+		form#form-test(action="#")
+			ol
+				li
+					span.first He
+					input.q1(name="q1" type="text")
+					span.second French. He was born in Paris.
+				li 
+					span.first They
+					input.q2(name="q2" type="text")
+					span.second Japanes. They live in Tokio
+				li
+					span.first He
+					input.q1(name="q1" type="text")
+					span.second French. He was born in Paris.
+				li 
+					span.first They
+					input.q2(name="q2" type="text")
+					span.second Japanes. They live in Tokio
+				li
+					span.first He
+					input.q1(name="q1" type="text")
+					span.second French. He was born in Paris.
+				li 
+					span.first They
+					input.q2(name="q2" type="text")
+					span.second Japanes. They live in Tokio
+				li
+					span.first He
+					input.q1(name="q1" type="text")
+					span.second French. He was born in Paris.
+				li 
+					span.first They
+					input.q2(name="q2" type="text")
+					span.second Japanes. They live in Tokio
+				li
+					span.first He
+					input.q1(name="q1" type="text")
+					span.second French. He was born in Paris.
+				li 
+					span.first They
+					input.q2(name="q2" type="text")
+					span.second Japanes. They live in Tokio
+			//- 	input.btn-test(name="btn" type="submit" value="Проверить")
+			//- button.btn-read Показать
+			+b.test-btn._check
+				+e.P.A(href="#") Check
+			+b.test-btn._answers
+				+e.P.A(href="#") Show answers
+			+b.test-btn._practice
+				+e.P.A(href="#") Show theory
 			
